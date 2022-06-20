@@ -17,18 +17,12 @@ function App() {
     lufthastighet: 2.5,
     diameter: 100,
   });
-  const [lufthastighet, setLufthastighet] = useState(2.7);
-  const [diameter, setDiameter] = useState();
-
-  // Data
-  // sliderData =
 
   // Return
   return (
     <>
       <Nav />
       <Header h="h3">Energy calculator</Header>
-
       <SliderContainer
         sliderData={sliderData}
         formulaValues={formulaValues}
