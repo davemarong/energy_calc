@@ -16,7 +16,7 @@ import FormLabel from "@mui/material/FormLabel";
 // Data
 
 // Functional component
-export const Filters = () => {
+export const Filters = ({}) => {
   // State
 
   // Functions

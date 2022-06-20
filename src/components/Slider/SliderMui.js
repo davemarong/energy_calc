@@ -1,9 +1,13 @@
 // IMPORT
 
 // React
+import { useState } from "react";
 
 // Material UI
 import Slider from "@mui/material/Slider";
+import Typography from "@mui/material/Typography";
+import Grid from "@mui/material/Grid";
+import Container from "@mui/material/Container";
 
 // Components
 
@@ -12,45 +16,49 @@ import Slider from "@mui/material/Slider";
 // Data
 
 // Functional component
-export const SliderMui = () => {
+export const SliderMui = ({ sliderData, setFormulaValues }) => {
+  // Props
+  const { marks, step, min, max, label, metric, defaultValue, stateName } =
+    sliderData;
+
   // State
+  const [value, setValue] = useState(defaultValue);
 
   // Functions
+  const handleValue = (e, eValue) => {
+    setValue(eValue);
+  };
 
-  // Data
-  const marks = [
-    {
-      value: 0,
-      label: "0°C",
-    },
-    {
-      value: 25,
-      label: "25°C",
-    },
-
-    {
-      value: 50,
-      label: "50°C",
-    },
-    {
-      value: 75,
-      label: "75°C",
-    },
-    {
-      value: 100,
-      label: "100°C",
-    },
-  ];
-
+  const handleUpdateFormulaValue = (e, eValue) => {
+    setFormulaValues((prev) => {
+      return { ...prev, [stateName]: eValue };
+    });
+  };
   // Return
   return (
-    <div style={{ margin: 100 }}>
-      <Slider
-        defaultValue={50}
-        aria-label="Default"
-        marks={marks}
-        valueLabelDisplay="on"
-      />
-    </div>
+    <Container maxWidth="sm">
+      <Grid container direction="row">
+        <Grid container item justifyContent="space-between" direction="row">
+          <Typography>{label}</Typography>
+          <Typography>
+            {value} {metric}
+          </Typography>
+        </Grid>
+        <Grid item xs={12}>
+          <Slider
+            defaultValue={defaultValue}
+            aria-label="Default"
+            marks={marks}
+            min={min}
+            max={max}
+            step={step}
+            name="dude"
+            valueLabelDisplay="auto"
+            onChange={handleValue}
+            onChangeCommitted={handleUpdateFormulaValue}
+          />
+        </Grid>
+      </Grid>
+    </Container>
   );
 };
