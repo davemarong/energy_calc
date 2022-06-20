@@ -25,7 +25,7 @@ export const findSirkulærDiameterTrykkfall = (formulaValues) => {
 };
 
 // Variables with functions
-export const link_sirkulær_luftmengde = [
+export const sirkulær_luftmengde_link = [
   {
     func: findSirkulærLuftmengde,
     label: "Sirkulær luftmengde",
@@ -38,7 +38,7 @@ export const link_sirkulær_luftmengde = [
   },
 ];
 
-export const link_sirkulær_hastighet = [
+export const sirkulær_hastighet_link = [
   {
     func: findSirkulærLufthastighet,
     label: "Sirkulær lufthastighet",
@@ -51,7 +51,7 @@ export const link_sirkulær_hastighet = [
   },
 ];
 
-export const link_sirkulær_diameter = [
+export const sirkulær_diameter_link = [
   { func: findSirkulærDiameter, label: "Sirkulær diameter", metric: "mm" },
   {
     func: findSirkulærDiameterTrykkfall,

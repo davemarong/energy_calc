@@ -47,6 +47,7 @@ export const SliderMui = ({ sliderData, setFormulaValues }) => {
         <Grid item xs={12}>
           <Slider
             defaultValue={defaultValue}
+            color="secondary"
             aria-label="Default"
             marks={marks}
             min={min}

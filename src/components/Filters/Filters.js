@@ -1,43 +1,66 @@
 // IMPORT
 
 // React
+import { useState } from "react";
 
 // Material UI
-import Radio from "@mui/material/Radio";
-import RadioGroup from "@mui/material/RadioGroup";
-import FormControlLabel from "@mui/material/FormControlLabel";
-import FormControl from "@mui/material/FormControl";
-import FormLabel from "@mui/material/FormLabel";
+import ToggleButton from "@mui/material/ToggleButton";
+import ToggleButtonGroup from "@mui/material/ToggleButtonGroup";
+import Container from "@mui/material/Container";
+import Grid from "@mui/material/Grid";
 
 // Components
 
 // Utils
 
 // Data
+import { filter_items } from "./Filter_items";
+import { allFormulaData } from "../../formulaData/CombinedData";
 
 // Functional component
-export const Filters = ({}) => {
+export const Filters = ({
+  setFormulaFunctions,
+  setFormulaValues,
+  setSliderData,
+}) => {
   // State
+  const [alignment, setAlignment] = useState("Luftmengde");
 
   // Functions
+  const handleChange = (event, newAlignment) => {
+    setAlignment(newAlignment);
+  };
 
+  const handleSwitchFilter = (event, value) => {
+    const { formulaValue, formulaFunctions, sliderData } =
+      allFormulaData[value];
+    setFormulaFunctions(formulaFunctions);
+    setFormulaValues(formulaValue);
+    setSliderData(sliderData);
+  };
   // Return
   return (
-    <FormControl>
-      <FormLabel id="demo-row-radio-buttons-group-label">Typer</FormLabel>
-      <RadioGroup
-        row
-        aria-labelledby="demo-row-radio-buttons-group-label"
-        name="row-radio-buttons-group"
-      >
-        <FormControlLabel value="Kubikk" control={<Radio />} label="Kubikk" />
-        <FormControlLabel value="Trykk" control={<Radio />} label="Trykk" />
-        <FormControlLabel
-          value="Ventilasjon"
-          control={<Radio />}
-          label="Ventilasjon"
-        />
-      </RadioGroup>
-    </FormControl>
+    <Container maxWidth="sm">
+      <Grid container justifyContent="center">
+        <ToggleButtonGroup
+          color="secondary"
+          value={alignment}
+          exclusive
+          onChange={handleChange}
+        >
+          {filter_items.map((item) => {
+            return (
+              <ToggleButton
+                onClick={handleSwitchFilter}
+                key={item.id}
+                value={item.label}
+              >
+                {item.label}
+              </ToggleButton>
+            );
+          })}
+        </ToggleButtonGroup>
+      </Grid>
+    </Container>
   );
 };
