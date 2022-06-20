@@ -31,7 +31,7 @@ export const SliderMui = ({ sliderData, setFormulaValues }) => {
 
   const handleUpdateFormulaValue = (e, eValue) => {
     setFormulaValues((prev) => {
-      return { ...prev, [stateName]: eValue };
+      return { ...prev, [stateName]: { ...prev[stateName], value: eValue } };
     });
   };
   // Return
