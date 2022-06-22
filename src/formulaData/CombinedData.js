@@ -3,18 +3,21 @@ import {
   sirkulær_hastighet_formula_values,
   sirkulær_diameter_formula_values,
   trykkfall_formula_values,
+  diameterRør_formula_values,
 } from "./FormulaValues";
 import {
   sirkulær_luftmengde_link,
   sirkulær_hastighet_link,
   sirkulær_diameter_link,
   trykkfall_link,
+  diameter_rør_link,
 } from "./FormulaFunctions";
 import {
   sirkulær_luftmengde_sliderData,
   sirkulær_hastighet_sliderData,
   sirkulær_diameter_sliderData,
   trykkfall_sliderData,
+  diameter_rør_sliderData,
 } from "./SliderData";
 
 export const allFormulaData = {
@@ -29,9 +32,9 @@ export const allFormulaData = {
     sliderData: sirkulær_hastighet_sliderData,
   },
   Diameter: {
-    formulaValue: sirkulær_diameter_formula_values,
-    formulaFunctions: sirkulær_diameter_link,
-    sliderData: sirkulær_diameter_sliderData,
+    formulaValue: diameterRør_formula_values,
+    formulaFunctions: diameter_rør_link,
+    sliderData: diameter_rør_sliderData,
   },
   Trykkfall: {
     formulaValue: trykkfall_formula_values,

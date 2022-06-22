@@ -41,20 +41,22 @@ export const findTrykkfallStål = (formulaValues) => {
     formulaValues.diameter.value ** -4.892
   );
 };
-// export const findDiameterRørPlast = (formulaValues) => {
-//   return (
-//     4357 *
-//     (formulaValues.luftmengde.value * 3600) ** 1.826 *
-//     formulaValues.diameter.value ** -4.892
-//   );
-// };
-// export const findDiameterRørStål = (formulaValues) => {
-//   return (
-//     4357 *
-//     (formulaValues.luftmengde.value * 3600) ** 1.826 *
-//     formulaValues.diameter.value ** -4.892
-//   );
-// };
+export const findDiameterRørPlast = (formulaValues) => {
+  return (
+    (5.843 * (formulaValues.luftmengde.value * 3600) ** 0.367) /
+    formulaValues.trykkfall.value ** 0.215
+  );
+};
+// =5.843*(C17*3600)^(0.367)/C18^(0.215)
+
+export const findDiameterRørStål = (formulaValues) => {
+  return (
+    (5.545 * (formulaValues.luftmengde.value * 3600) ** 0.373) /
+    formulaValues.trykkfall.value ** 0.204
+  );
+};
+
+// =5.545*(C22*3600)^(0.373)/C23^(0.204)
 
 // Variables with functions
 
@@ -105,9 +107,12 @@ export const trykkfall_link = [
     metric: "pa/m",
   },
   { func: findTrykkfallStål, label: "Trykkfall stålrør", metric: "pa/m" },
-  // {
-  //   func: findSirkulærDiameterTrykkfall,
-  //   label: "Sirkulær trykkfall",
-  //   metric: "Pa/m",
-  // },
+];
+export const diameter_rør_link = [
+  {
+    func: findDiameterRørPlast,
+    label: "Diameter kobber/plastrør",
+    metric: "mm",
+  },
+  { func: findDiameterRørStål, label: "Diameter stålrør", metric: "mm" },
 ];

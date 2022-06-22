@@ -31,3 +31,7 @@ export const trykkfall_formula_values = {
   diameter,
   luftmengde,
 };
+export const diameterRør_formula_values = {
+  trykkfall,
+  luftmengde,
+};

@@ -48,3 +48,4 @@ export const sirkulær_diameter_sliderData = [
   sirkulær_luftmengde,
 ];
 export const trykkfall_sliderData = [sirkulær_diameter, sirkulær_luftmengde];
+export const diameter_rør_sliderData = [trykkfall, sirkulær_luftmengde];
