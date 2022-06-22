@@ -11,4 +11,8 @@ export const filter_items = [
     label: "Diameter",
     id: 2,
   },
+  {
+    label: "Trykkfall",
+    id: 3,
+  },
 ];

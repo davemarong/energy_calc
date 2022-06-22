@@ -2,19 +2,19 @@ const sirkulær_diameter = {
   label: "Diameter",
   stateName: "diameter",
   metric: "mm",
-  min: 50,
-  max: 1600,
-  step: 50,
-  defaultValue: 100,
+  min: 1,
+  max: 100,
+  step: 1,
+  defaultValue: 10,
 };
 const sirkulær_luftmengde = {
   label: "Luftmengde",
   stateName: "luftmengde",
-  metric: "m3/h",
-  min: 5,
-  max: 100000,
-  step: 5,
-  defaultValue: 105,
+  metric: "l/s",
+  min: 0,
+  max: 1,
+  step: 0.01,
+  defaultValue: 1,
 };
 const sirkulær_lufthastighet = {
   label: "Lufthastighet",
@@ -24,6 +24,15 @@ const sirkulær_lufthastighet = {
   max: 10,
   step: 0.1,
   defaultValue: 2.5,
+};
+const trykkfall = {
+  label: "Trykkfall",
+  stateName: "trykkfall",
+  metric: "pa/m",
+  min: 1,
+  max: 100,
+  step: 1,
+  defaultValue: 50,
 };
 
 export const sirkulær_luftmengde_sliderData = [
@@ -38,3 +47,4 @@ export const sirkulær_diameter_sliderData = [
   sirkulær_lufthastighet,
   sirkulær_luftmengde,
 ];
+export const trykkfall_sliderData = [sirkulær_diameter, sirkulær_luftmengde];
