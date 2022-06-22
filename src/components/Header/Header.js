@@ -19,7 +19,7 @@ export const Header = ({ children, h, align = "center" }) => {
 
   // Return
   return (
-    <Typography align={align} variant={h}>
+    <Typography style={{ margin: 50 }} align={align} variant={h}>
       {children}
     </Typography>
   );

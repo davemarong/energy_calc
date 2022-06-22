@@ -14,6 +14,9 @@ import { sirkulær_luftmengde_link } from "./formulaData/FormulaFunctions";
 import { sirkulær_luftmengde_formula_values } from "./formulaData/FormulaValues";
 import { Filters } from "./components/Filters/Filters";
 
+// Styles
+import "./App.css";
+
 function App() {
   // STATE
   // User input values

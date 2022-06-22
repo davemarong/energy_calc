@@ -34,7 +34,7 @@ export const DisplayResults = ({ formulaValues, formulaFunctions }) => {
         <TableBody>
           {result.map((item) => {
             return (
-              <TableRow style={{ border: "1px solid grey" }} key={item.label}>
+              <TableRow key={item.label}>
                 <TableCell>{item.label}</TableCell>
                 <TableCell>
                   {item.value} {item.metric}

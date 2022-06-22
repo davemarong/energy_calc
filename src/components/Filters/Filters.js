@@ -41,7 +41,7 @@ export const Filters = ({
   // Return
   return (
     <Container maxWidth="sm">
-      <Grid container justifyContent="center">
+      <Grid container justifyContent="center" style={{ margin: "50px 0" }}>
         <ToggleButtonGroup
           color="secondary"
           value={alignment}
