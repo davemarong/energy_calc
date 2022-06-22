@@ -34,6 +34,7 @@ export const Filters = ({
   const handleSwitchFilter = (event, value) => {
     const { formulaValue, formulaFunctions, sliderData } =
       allFormulaData[value];
+    console.log(sliderData);
     setFormulaFunctions(formulaFunctions);
     setFormulaValues(formulaValue);
     setSliderData(sliderData);

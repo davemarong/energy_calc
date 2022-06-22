@@ -1,7 +1,7 @@
 // IMPORT
 
 // React
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 // Material UI
 import Slider from "@mui/material/Slider";
@@ -34,6 +34,7 @@ export const SliderMui = ({ sliderData, setFormulaValues }) => {
       return { ...prev, [stateName]: { ...prev[stateName], value: eValue } };
     });
   };
+
   // Return
   return (
     <Container maxWidth="sm">

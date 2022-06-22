@@ -37,7 +37,6 @@ function App() {
 
   const SliderContainerProps = {
     sliderData: sliderData,
-    formulaValues: formulaValues,
     setFormulaValues: setFormulaValues,
   };
 
