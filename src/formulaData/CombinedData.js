@@ -4,6 +4,7 @@ import {
   sirkulær_diameter_formula_values,
   trykkfall_formula_values,
   diameterRør_formula_values,
+  hastighet_formula_values,
 } from "./FormulaValues";
 import {
   sirkulær_luftmengde_link,
@@ -11,6 +12,7 @@ import {
   sirkulær_diameter_link,
   trykkfall_link,
   diameter_rør_link,
+  hastighet_link,
 } from "./FormulaFunctions";
 import {
   sirkulær_luftmengde_sliderData,
@@ -18,6 +20,7 @@ import {
   sirkulær_diameter_sliderData,
   trykkfall_sliderData,
   diameter_rør_sliderData,
+  hastighet_sliderData,
 } from "./SliderData";
 
 export const allFormulaData = {
@@ -27,9 +30,9 @@ export const allFormulaData = {
     sliderData: sirkulær_luftmengde_sliderData,
   },
   Hastighet: {
-    formulaValue: sirkulær_hastighet_formula_values,
-    formulaFunctions: sirkulær_hastighet_link,
-    sliderData: sirkulær_hastighet_sliderData,
+    formulaValue: hastighet_formula_values,
+    formulaFunctions: hastighet_link,
+    sliderData: hastighet_sliderData,
   },
   Diameter: {
     formulaValue: diameterRør_formula_values,

@@ -9,9 +9,9 @@ import { SliderContainer } from "./components/Slider/SliderContainer";
 import { DisplayResults } from "./components/DisplayResults/DisplayResults";
 
 // Data
-import { sirkulær_luftmengde_sliderData } from "./formulaData/SliderData";
-import { sirkulær_luftmengde_link } from "./formulaData/FormulaFunctions";
-import { sirkulær_luftmengde_formula_values } from "./formulaData/FormulaValues";
+import { trykkfall_sliderData } from "./formulaData/SliderData";
+import { trykkfall_link } from "./formulaData/FormulaFunctions";
+import { trykkfall_formula_values } from "./formulaData/FormulaValues";
 import { Filters } from "./components/Filters/Filters";
 
 // Styles
@@ -20,17 +20,13 @@ import "./App.css";
 function App() {
   // STATE
   // User input values
-  const [formulaValues, setFormulaValues] = useState(
-    sirkulær_luftmengde_formula_values
-  );
+  const [formulaValues, setFormulaValues] = useState(trykkfall_formula_values);
 
   // The formula functions that calculate the result values
-  const [formulaFunctions, setFormulaFunctions] = useState(
-    sirkulær_luftmengde_link
-  );
+  const [formulaFunctions, setFormulaFunctions] = useState(trykkfall_link);
 
   // The data for the sliders the user interacts with
-  const [sliderData, setSliderData] = useState(sirkulær_luftmengde_sliderData);
+  const [sliderData, setSliderData] = useState(trykkfall_sliderData);
 
   // PROPS OBJECT
   const FiltersProps = {

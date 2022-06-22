@@ -1,8 +1,8 @@
 export const filter_items = [
-  {
-    label: "Luftmengde",
-    id: 0,
-  },
+  // {
+  //   label: "Luftmengde",
+  //   id: 0,
+  // },
   {
     label: "Hastighet",
     id: 1,

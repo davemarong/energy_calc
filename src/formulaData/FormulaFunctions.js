@@ -32,32 +32,37 @@ export const findTrykkfallPlast = (formulaValues) => {
     3623 *
     (formulaValues.luftmengde.value * 3600) ** 1.707 *
     formulaValues.diameter.value ** -4.642
-  );
+  ).toFixed(2);
 };
 export const findTrykkfallStål = (formulaValues) => {
   return (
     4357 *
     (formulaValues.luftmengde.value * 3600) ** 1.826 *
     formulaValues.diameter.value ** -4.892
-  );
+  ).toFixed(2);
 };
 export const findDiameterRørPlast = (formulaValues) => {
   return (
     (5.843 * (formulaValues.luftmengde.value * 3600) ** 0.367) /
     formulaValues.trykkfall.value ** 0.215
-  );
+  ).toFixed(2);
 };
-// =5.843*(C17*3600)^(0.367)/C18^(0.215)
 
 export const findDiameterRørStål = (formulaValues) => {
   return (
     (5.545 * (formulaValues.luftmengde.value * 3600) ** 0.373) /
     formulaValues.trykkfall.value ** 0.204
-  );
+  ).toFixed(2);
+};
+export const findHastighet = (formulaValues) => {
+  return (
+    ((4 * formulaValues.luftmengde.value) /
+      (3.14 * (formulaValues.diameter.value * formulaValues.diameter.value))) *
+    1000
+  ).toFixed(2);
 };
 
-// =5.545*(C22*3600)^(0.373)/C23^(0.204)
-
+// =(4*G29)/(3.14*(G30*G30))
 // Variables with functions
 
 // When the user clicks on the link/button of the "label" (sirkulær luftmengde),
@@ -115,4 +120,11 @@ export const diameter_rør_link = [
     metric: "mm",
   },
   { func: findDiameterRørStål, label: "Diameter stålrør", metric: "mm" },
+];
+export const hastighet_link = [
+  {
+    func: findHastighet,
+    label: "Hastighet",
+    metric: "m/s",
+  },
 ];

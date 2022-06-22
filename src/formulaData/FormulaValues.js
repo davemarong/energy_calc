@@ -14,6 +14,10 @@ const trykkfall = {
   label: "Trykkfall",
   value: 50,
 };
+const hastighet = {
+  label: "Hastighet",
+  value: 1,
+};
 
 export const sirkulær_luftmengde_formula_values = {
   lufthastighet,
@@ -33,5 +37,9 @@ export const trykkfall_formula_values = {
 };
 export const diameterRør_formula_values = {
   trykkfall,
+  luftmengde,
+};
+export const hastighet_formula_values = {
+  diameter,
   luftmengde,
 };

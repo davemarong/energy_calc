@@ -24,7 +24,7 @@ export const Filters = ({
   setSliderData,
 }) => {
   // State
-  const [alignment, setAlignment] = useState("Luftmengde");
+  const [alignment, setAlignment] = useState("Trykkfall");
 
   // Functions
   const handleChange = (event, newAlignment) => {
