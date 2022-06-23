@@ -17,6 +17,8 @@ import { Filters } from "./components/Filters/Filters";
 // Styles
 import "./App.css";
 
+import "./fonts/Montserrat/static/Montserrat-Regular.ttf";
+
 function App() {
   // STATE
   // User input values
@@ -49,6 +51,7 @@ function App() {
   // RETURN
   return (
     <>
+      <div className="hei">dude min</div>
       <Header h="h3">Energy calculator</Header>
       <DisplayResults
         formulaValues={formulaValues}
