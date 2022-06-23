@@ -16,7 +16,7 @@ import Container from "@mui/material/Container";
 // Data
 
 // Functional component
-export const SliderMui = ({ sliderData, setFormulaValues }) => {
+export const SliderMui = ({ sliderData, setFormulaValues, alignment }) => {
   // Props
   const { marks, step, min, max, label, metric, defaultValue, stateName } =
     sliderData;
@@ -34,6 +34,11 @@ export const SliderMui = ({ sliderData, setFormulaValues }) => {
       return { ...prev, [stateName]: { ...prev[stateName], value: eValue } };
     });
   };
+
+  // UseEffect
+  useEffect(() => {
+    handleUpdateFormulaValue("e", value);
+  }, [alignment]);
 
   // Return
   return (

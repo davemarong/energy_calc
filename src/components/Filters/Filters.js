@@ -1,7 +1,6 @@
 // IMPORT
 
 // React
-import { useState } from "react";
 
 // Material UI
 import ToggleButton from "@mui/material/ToggleButton";
@@ -22,11 +21,12 @@ export const Filters = ({
   setFormulaFunctions,
   setFormulaValues,
   setSliderData,
+  alignment,
+  setAlignment,
 }) => {
-  // State
-  const [alignment, setAlignment] = useState("Trykkfall");
+  // // State
 
-  // Functions
+  // // Functions
   const handleChange = (event, newAlignment) => {
     setAlignment(newAlignment);
   };
@@ -39,6 +39,7 @@ export const Filters = ({
     setFormulaValues(formulaValue);
     setSliderData(sliderData);
   };
+
   // Return
   return (
     <Container maxWidth="sm">

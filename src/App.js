@@ -28,16 +28,22 @@ function App() {
   // The data for the sliders the user interacts with
   const [sliderData, setSliderData] = useState(trykkfall_sliderData);
 
+  // The toggleButton/nav that is active."Trykkfall/Hastighet/Diameter"
+  const [alignment, setAlignment] = useState("Trykkfall");
+
   // PROPS OBJECT
   const FiltersProps = {
     setFormulaFunctions: setFormulaFunctions,
     setFormulaValues: setFormulaValues,
     setSliderData: setSliderData,
+    alignment: alignment,
+    setAlignment: setAlignment,
   };
 
   const SliderContainerProps = {
     sliderData: sliderData,
     setFormulaValues: setFormulaValues,
+    alignment: alignment,
   };
 
   // RETURN

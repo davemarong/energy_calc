@@ -11,7 +11,11 @@ import { SliderMui } from "./SliderMui";
 // Data
 
 // Functional component
-export const SliderContainer = ({ sliderData, setFormulaValues }) => {
+export const SliderContainer = ({
+  sliderData,
+  setFormulaValues,
+  alignment,
+}) => {
   // State
 
   // Functions
@@ -25,6 +29,7 @@ export const SliderContainer = ({ sliderData, setFormulaValues }) => {
             key={slider.label}
             sliderData={slider}
             setFormulaValues={setFormulaValues}
+            alignment={alignment}
           />
         );
       })}
